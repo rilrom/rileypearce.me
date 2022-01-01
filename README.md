@@ -4,7 +4,7 @@ A portfolio website where I can showcase projects I've built.
 
 ## Project Status
 
-This project is currently in development. About and projects pages coming soon.
+This project is currently in development. Projects page coming soon.
 
 ## Running locally
 
