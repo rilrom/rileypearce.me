@@ -70,26 +70,29 @@ export default function Header() {
             </div>
             
             <Disclosure.Panel>
-              <div className="pt-2 pb-3 space-y-1">
-                {navigation.map((item) => (
-                  <Link
-                      key={item.name}
-                      href={item.href}
-                    >
-                      <a
-                        className={classNames(
-                          router.asPath === item.href
-                            ? 'bg-zinc-800 text-white'
-                            : 'text-light hover:bg-zinc-800 hover:text-white',
-                          'block px-4 py-2 rounded text-base font-medium transition-all'
-                        )}
-                        aria-current={router.asPath === item.href ? 'page' : undefined}
+              {({ close }) => (
+                <div className="pt-2 pb-3 space-y-1">
+                  {navigation.map((item) => (
+                    <Link
+                        key={item.name}
+                        href={item.href}
                       >
-                        {item.name}
-                      </a>
-                    </Link>
-                ))}
-              </div>
+                        <a
+                          className={classNames(
+                            router.asPath === item.href
+                              ? 'bg-zinc-800 text-white'
+                              : 'text-light hover:bg-zinc-800 hover:text-white',
+                            'block px-4 py-2 rounded text-base font-medium transition-all'
+                          )}
+                          aria-current={router.asPath === item.href ? 'page' : undefined}
+                          onClick={() => close()}
+                        >
+                          {item.name}
+                        </a>
+                      </Link>
+                  ))}
+                </div>
+              )}
             </Disclosure.Panel>
           </>
         )}
