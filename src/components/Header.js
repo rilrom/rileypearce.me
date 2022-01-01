@@ -58,7 +58,7 @@ export default function Header() {
                 </div>
               </div>
               <div className="flex md:hidden">
-                <Disclosure.Button className="bg-zinc-800 inline-flex items-center justify-center p-2 rounded-md text-light hover:text-white hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-800 focus:ring-white transition-all">
+                <Disclosure.Button className="bg-zinc-800 inline-flex items-center justify-center p-2 rounded-md text-light hover:text-white hover:bg-zinc-800 transition-all">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
