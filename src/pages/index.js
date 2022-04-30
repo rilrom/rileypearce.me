@@ -20,9 +20,9 @@ export default function Home() {
 
       <article className="prose max-w-none mt-8 lg:mt-20">
         <p>Aussie software developer with over 4 years experience. I&apos;m a big fan of building mobile and web applications that focus on simplicity &amp; accessibility.</p>
-        
-        <p>I work for a company called <a href="https://www.brainiumlabs.com.au/" target="_blank" rel="noreferrer" title="Opens in a new window">Brainium Labs</a> where we handcraft some of the best government and commercial software applications the Northern Territory has to offer.</p>
-        
+
+        <p>I&apos;m currently a full-stack developer at <a href="https://www.airteam.com.au/" target="_blank" rel="noreferrer" title="Opens in a new window">Airteam</a>.</p>
+
         <p>
           <a href="https://github.com/rilrom" target="_blank" rel="noreferrer" title="Opens in a new window" className="inline-block icon">
             <span className="sr-only">Github</span>
