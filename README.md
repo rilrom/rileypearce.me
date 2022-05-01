@@ -12,11 +12,11 @@ Clone this repository. You will need `node` and `npm` installed globally on your
 
 Installation:
 
-`npm install`  
+`npm install`
 
 To start server:
 
-`npm run dev`  
+`npm run dev`
 
 To visit app:
 

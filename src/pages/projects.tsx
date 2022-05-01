@@ -8,5 +8,5 @@ export default function Projects() {
         <p>Coming soon</p>
       </article>
     </>
-  )
+  );
 }
