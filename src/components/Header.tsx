@@ -4,6 +4,10 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { useTheme } from '@nextui-org/react';
+
+// Components
+import ThemeSwitch from "./ThemeSwitch";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -16,6 +20,7 @@ function classNames(...classes: string[]) {
 
 export default function Header() {
   const router = useRouter();
+  const { isDark } = useTheme();
 
   return (
     <div className="min-h-full px-4 border-b border-nav">
@@ -24,16 +29,19 @@ export default function Header() {
           <>
             <div className="flex items-center justify-between h-16">
               <div className="flex-shrink-0">
-                <Link href="/">
-                  <a className="flex items-center rounded-full">
-                    <Image
-                      src="/images/logo-light.png"
-                      alt="Portfolio logo"
-                      width={32}
-                      height={32}
-                    />
-                  </a>
-                </Link>
+                <div className="flex items-center">
+                  <Link href="/">
+                    <a className="flex items-center rounded-full mr-5">
+                      <Image
+                        src={`/images/logo-${isDark ? 'light' : 'dark'}.png`}
+                        alt="Portfolio logo"
+                        width={32}
+                        height={32}
+                      />
+                    </a>
+                  </Link>
+                  <ThemeSwitch />
+                </div>
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex justify-end items-baseline space-x-4">

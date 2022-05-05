@@ -1,7 +1,13 @@
 // Dependencies
 import Image from "next/image";
 
-export default function Home() {
+// Types
+import type { NextPage } from "next";
+
+// Components
+import Layout from "components/Layout";
+
+const Home: NextPage = () => {
   return (
     <>
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
@@ -106,4 +112,11 @@ export default function Home() {
       </article>
     </>
   );
-}
+};
+
+// @ts-ignore
+Home.getLayout = function getLayout(page: React.ReactElement) {
+  return <Layout>{page}</Layout>;
+};
+
+export default Home;

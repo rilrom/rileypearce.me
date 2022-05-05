@@ -1,16 +1,45 @@
 // Dependencies
-import { AppProps } from "next/app";
+import { NextUIProvider, theme } from "@nextui-org/react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+
+// Types
+import type { NextPage } from "next";
+import type { AppProps } from "next/app";
 
 // Styles
+import { lightTheme, darkTheme } from "styles/shared";
+import { globalStyles } from "styles/globals";
 import "../styles/globals.css";
 
-// Components
-import Layout from "components/Layout";
+type NextPageWithLayout = NextPage & {
+  getLayout?: (page: React.ReactElement) => React.ReactNode;
+};
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+const MyApp = ({ Component, pageProps }: AppPropsWithLayout) => {
+
+  globalStyles();
+
+  // Use the layout defined at the page level, if available
+  const getLayout = Component.getLayout ?? ((page) => page);
+
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <NextThemesProvider
+      defaultTheme="system"
+      attribute="class"
+      value={{
+        light: lightTheme.className,
+        dark: darkTheme.className
+      }}
+    >
+      <NextUIProvider>
+        {getLayout(<Component {...pageProps} />)}
+      </NextUIProvider>
+    </NextThemesProvider>
   );
-}
+};
+
+export default MyApp;
