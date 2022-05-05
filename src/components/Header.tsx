@@ -35,7 +35,7 @@ export default function Header() {
                   </a>
                 </Link>
               </div>
-              <div className="hidden md:block">
+              <div className="hidden xs:block">
                 <div className="ml-10 flex justify-end items-baseline space-x-4">
                   {navigation.map((item) => (
                     <Link key={item.name} href={item.href}>
@@ -56,7 +56,7 @@ export default function Header() {
                   ))}
                 </div>
               </div>
-              <div className="flex md:hidden">
+              <div className="flex xs:hidden">
                 <Disclosure.Button className="bg-zinc-800 inline-flex items-center justify-center p-2 rounded-md text-light hover:text-white hover:bg-zinc-800 transition-all">
                   <span className="sr-only">Open main menu</span>
                   {open ? (

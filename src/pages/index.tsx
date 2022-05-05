@@ -4,10 +4,24 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-        <h1 className="font-medium text-heading text-3xl md:text-5xl lg:text-6xl leading-[2.5rem] md:leading-[4rem] lg:leading-[5rem] order-last md:order-first mt-8 md:mt-0">
-          Hi, I&apos;m Riley. <br />I build websites.
-        </h1>
+      <div className="flex flex-col xs:flex-row justify-between items-start">
+        <div className="flex flex-col order-last xs:order-first mt-8 xs:mt-0">
+          <h1 className="font-mono font-medium text-heading text-3xl xs:text-5xl leading-[2.5rem] xs:leading-[4rem] -ml-[1px] xs:-ml-[3px]">
+            Riley Pearce
+          </h1>
+          <p className="text-subtitle">
+            Full stack developer at{" "}
+            <a
+              className="underline hover:no-underline"
+              href="https://www.airteam.com.au/"
+              target="_blank"
+              rel="noreferrer"
+              title="Opens in a new window"
+            >
+              Airteam
+            </a>
+          </p>
+        </div>
         <Image
           src="/images/profile-image.jpg"
           alt="Profile picture"
@@ -17,24 +31,10 @@ export default function Home() {
         />
       </div>
 
-      <article className="prose max-w-none mt-8 lg:mt-20">
+      <article className="prose max-w-[450px] mt-4 xs:-mt-6">
         <p>
-          Aussie software developer with over 4 years experience. I&apos;m a big
-          fan of building mobile and web applications that focus on simplicity
-          &amp; accessibility.
-        </p>
-
-        <p>
-          I&apos;m currently a full-stack developer at{" "}
-          <a
-            href="https://www.airteam.com.au/"
-            target="_blank"
-            rel="noreferrer"
-            title="Opens in a new window"
-          >
-            Airteam
-          </a>
-          .
+          Working towards a more accessible web. Equal access defines my
+          approach to software development.
         </p>
 
         <p>

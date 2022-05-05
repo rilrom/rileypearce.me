@@ -15,7 +15,7 @@ export default function Layout({ children }: PropsWithChildren<{}>) {
       <Header />
       <main
         className="container mx-auto max-w-screen-lg px-4 mt-16"
-        style={{ maxWidth: "880px" }}
+        style={{ maxWidth: "720px" }}
       >
         {children}
       </main>
