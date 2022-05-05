@@ -2,22 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "DM Mono";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/fonts/DMMono-Regular.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "DM Mono";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(/fonts/DMMono-Medium.ttf) format("truetype");
-}
-
 html {
   background-color: #111111;
 }
