@@ -1,13 +1,14 @@
+'use client';
+
 // Dependencies
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Projects", href: "/projects" },
 ];
 
 function classNames(...classes: string[]) {
@@ -15,7 +16,7 @@ function classNames(...classes: string[]) {
 }
 
 export default function Header() {
-  const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <div className="min-h-full px-4 border-b border-nav">
@@ -24,34 +25,28 @@ export default function Header() {
           <>
             <div className="flex items-center justify-between h-16">
               <div className="flex-shrink-0">
-                <Link href="/">
-                  <a className="flex items-center rounded-full">
-                    <Image
-                      src="/images/logo-light.png"
-                      alt="Portfolio logo"
-                      width={32}
-                      height={32}
-                    />
-                  </a>
+                <Link href="/" className="flex items-center rounded-full">
+                  <Image
+                    src="/images/logo-light.png"
+                    alt="Portfolio logo"
+                    width={32}
+                    height={32}
+                  />
                 </Link>
               </div>
               <div className="hidden xs:block">
                 <div className="ml-10 flex justify-end items-baseline space-x-4">
                   {navigation.map((item) => (
-                    <Link key={item.name} href={item.href}>
-                      <a
-                        className={classNames(
-                          router.asPath === item.href
-                            ? "bg-zinc-800 text-white"
-                            : "text-light hover:bg-zinc-800 hover:text-white",
-                          "px-3 py-2 rounded-md font-medium transition-all"
-                        )}
-                        aria-current={
-                          router.asPath === item.href ? "page" : undefined
-                        }
-                      >
-                        {item.name}
-                      </a>
+                    <Link key={item.name} href={item.href} className={classNames(
+                      pathname === item.href
+                        ? "bg-zinc-800 text-white"
+                        : "text-light hover:bg-zinc-800 hover:text-white",
+                      "px-3 py-2 rounded-md font-medium transition-all"
+                    )}
+                      aria-current={
+                        pathname === item.href ? "page" : undefined
+                      }>
+                      {item.name}
                     </Link>
                   ))}
                 </div>
@@ -72,21 +67,17 @@ export default function Header() {
               {({ close }) => (
                 <div className="pt-2 pb-3 space-y-1">
                   {navigation.map((item) => (
-                    <Link key={item.name} href={item.href}>
-                      <a
-                        className={classNames(
-                          router.asPath === item.href
-                            ? "bg-zinc-800 text-white"
-                            : "text-light hover:bg-zinc-800 hover:text-white",
-                          "block px-4 py-2 rounded text-base font-medium transition-all"
-                        )}
-                        aria-current={
-                          router.asPath === item.href ? "page" : undefined
-                        }
-                        onClick={() => close()}
-                      >
-                        {item.name}
-                      </a>
+                    <Link key={item.name} href={item.href} className={classNames(
+                      pathname === item.href
+                        ? "bg-zinc-800 text-white"
+                        : "text-light hover:bg-zinc-800 hover:text-white",
+                      "block px-4 py-2 rounded text-base font-medium transition-all"
+                    )}
+                      aria-current={
+                        pathname === item.href ? "page" : undefined
+                      }
+                      onClick={() => close()}>
+                      {item.name}
                     </Link>
                   ))}
                 </div>
