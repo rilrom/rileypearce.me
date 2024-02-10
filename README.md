@@ -27,5 +27,3 @@ To visit app:
 This project was to familiarize myself with the tailwind css framework.
 
 Eventually it will be used as a testing ground for all sorts of different things such as authentication, various plugins and maybe a blog using a CMS.
-
-One of the main challenges was ensuring I didn't fallback into my usual pattern of writing css as tailwind is very different to what I'm used to.

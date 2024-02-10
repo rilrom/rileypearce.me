@@ -1,16 +1,17 @@
-// Dependencies
 import Image from "next/image";
+
+import Heading from "components/Heading";
 
 export default function Home() {
   return (
     <>
       <div className="flex flex-col xs:flex-row justify-between items-start">
         <div className="flex flex-col order-last xs:order-first mt-8 xs:mt-0">
-          <h1 className="font-mono font-medium text-heading text-3xl xs:text-5xl leading-[2.5rem] xs:leading-[4rem] -ml-[1px] xs:-ml-[3px]">
+          <Heading>
             Riley Pearce
-          </h1>
+          </Heading>
           <p className="text-subtitle">
-            Full stack developer at{" "}
+            Senior full stack developer at{" "}
             <a
               className="underline hover:no-underline"
               href="https://www.airteam.com.au/"

@@ -11,3 +11,17 @@ body {
   padding: 0;
   margin: 0;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body header, body footer {
+  flex: none;
+}
+
+body main {
+  flex: 1 0 auto;
+}

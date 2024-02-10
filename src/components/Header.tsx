@@ -1,25 +1,20 @@
 'use client';
 
-// Dependencies
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-const navigation = [
-  { name: "Home", href: "/" },
-];
+import { navigation } from "const/navigation";
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
+import { classNames } from "utils/classNames";
 
 export default function Header() {
   const pathname = usePathname();
 
   return (
-    <div className="min-h-full px-4 border-b border-nav">
+    <header className="min-h-full px-4 border-b border-nav">
       <Disclosure as="nav">
         {({ open }) => (
           <>
@@ -86,6 +81,6 @@ export default function Header() {
           </>
         )}
       </Disclosure>
-    </div>
+    </header>
   );
 }
