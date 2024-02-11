@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -32,15 +32,17 @@ export default function Header() {
               <div className="hidden xs:block">
                 <div className="ml-10 flex justify-end items-baseline space-x-4">
                   {navigation.map((item) => (
-                    <Link key={item.name} href={item.href} className={classNames(
-                      pathname === item.href
-                        ? "bg-zinc-800 text-white"
-                        : "text-light hover:bg-zinc-800 hover:text-white",
-                      "px-3 py-2 rounded-md font-medium transition-all"
-                    )}
-                      aria-current={
-                        pathname === item.href ? "page" : undefined
-                      }>
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className={classNames(
+                        pathname === item.href
+                          ? "bg-zinc-800 text-white"
+                          : "text-light hover:bg-zinc-800 hover:text-white",
+                        "px-3 py-2 rounded-md font-medium transition-all"
+                      )}
+                      aria-current={pathname === item.href ? "page" : undefined}
+                    >
                       {item.name}
                     </Link>
                   ))}
@@ -62,16 +64,18 @@ export default function Header() {
               {({ close }) => (
                 <div className="pt-2 pb-3 space-y-1">
                   {navigation.map((item) => (
-                    <Link key={item.name} href={item.href} className={classNames(
-                      pathname === item.href
-                        ? "bg-zinc-800 text-white"
-                        : "text-light hover:bg-zinc-800 hover:text-white",
-                      "block px-4 py-2 rounded text-base font-medium transition-all"
-                    )}
-                      aria-current={
-                        pathname === item.href ? "page" : undefined
-                      }
-                      onClick={() => close()}>
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className={classNames(
+                        pathname === item.href
+                          ? "bg-zinc-800 text-white"
+                          : "text-light hover:bg-zinc-800 hover:text-white",
+                        "block px-4 py-2 rounded text-base font-medium transition-all"
+                      )}
+                      aria-current={pathname === item.href ? "page" : undefined}
+                      onClick={() => close()}
+                    >
                       {item.name}
                     </Link>
                   ))}

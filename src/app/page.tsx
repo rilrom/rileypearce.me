@@ -7,9 +7,7 @@ export default function Home() {
     <>
       <div className="flex flex-col xs:flex-row justify-between items-start">
         <div className="flex flex-col order-last xs:order-first mt-8 xs:mt-0">
-          <Heading>
-            Riley Pearce
-          </Heading>
+          <Heading>Riley Pearce</Heading>
           <p className="text-subtitle">
             Senior full stack developer at{" "}
             <a

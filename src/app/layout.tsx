@@ -1,22 +1,22 @@
 import "../styles/globals.css";
 
-import { DM_Mono, Inter } from 'next/font/google';
+import { DM_Mono, Inter } from "next/font/google";
 
 import Header from "components/Header";
 import Footer from "components/Footer";
 
 const sans = Inter({
-  variable: '--font-sans',
-  weight: ['400', '500'],
-  style: 'normal',
-  subsets: ['latin'],
+  variable: "--font-sans",
+  weight: ["400", "500"],
+  style: "normal",
+  subsets: ["latin"],
 });
 
 const mono = DM_Mono({
-  variable: '--font-mono',
-  weight: ['400', '500'],
-  style: 'normal',
-  subsets: ['latin'],
+  variable: "--font-mono",
+  weight: ["400", "500"],
+  style: "normal",
+  subsets: ["latin"],
 });
 
 export default function RootLayout({

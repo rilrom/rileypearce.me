@@ -15,8 +15,8 @@ module.exports = {
         xs: "600px",
       },
       fontFamily: {
-        mono: ['var(--font-mono)'],
-        sans: ['var(--font-sans)'],
+        mono: ["var(--font-mono)"],
+        sans: ["var(--font-sans)"],
       },
       typography: (theme) => ({
         DEFAULT: {

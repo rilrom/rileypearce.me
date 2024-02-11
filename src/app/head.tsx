@@ -4,5 +4,5 @@ export default function Head() {
       <title>Riley Pearce</title>
       <link rel="icon" href="/favicon.ico" />
     </>
-  )
+  );
 }
